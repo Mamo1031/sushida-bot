@@ -22,3 +22,5 @@ ENV/
 
 # macOS system files
 .DS_Store
+
+images/image.png
