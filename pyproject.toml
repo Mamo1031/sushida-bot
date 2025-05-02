@@ -8,6 +8,8 @@ requires-python = ">=3.10"
 dependencies = [
     "opencv-python>=4.11.0.86",
     "pyautogui>=0.9.54",
+    "pyocr>=0.8.5",
+    "pytesseract>=0.3.13",
     "selenium>=4.31.0",
 ]
 
