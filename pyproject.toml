@@ -1,0 +1,43 @@
+# Project metadata
+[project]
+name = "sushida-bot"
+version = "0.1.0"
+description = "Python-based automation for Sushida typing game"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "opencv-python>=4.11.0.86",
+    "pyautogui>=0.9.54",
+    "selenium>=4.31.0",
+]
+
+# Code formatting with Black
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+# Import sorting with isort
+[tool.isort]
+profile = "black"
+line_length = 88
+
+# Migrate lint settings to the new `lint` section
+[tool.ruff.lint]
+select = ["E", "F", "W", "C90"]
+ignore = ["E203"]
+
+# Linting with pylint: message control
+[tool.pylint.'MESSAGES CONTROL']
+disable = [
+    "C0114",  # missing-module-docstring
+    "C0115",  # missing-class-docstring
+]
+
+# Linting with pylint: master settings
+[tool.pylint.'MASTER']
+fail-under = 9.0
+
+# Static type checking with mypy
+[mypy]
+python_version = 3.8
+strict = true
